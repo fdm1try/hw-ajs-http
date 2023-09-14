@@ -1,6 +1,6 @@
+import moment from 'moment';
 import API from '../api';
 import Modal from './Modal';
-import moment from 'moment';
 
 export default class Ticket {
   #editListeners = [];
