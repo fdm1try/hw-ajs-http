@@ -89,7 +89,7 @@ export default class TicketList {
         id, name, created, status,
       } = response;
       this.addTicket(new Ticket(id, name, created, status));
-    }).catch(() => Modal.showError('Ошибка', 'Не удалось создать тикет!'));
+    }).catch(() => Modal.showError('Не удалось создать тикет!'));
   }
 
   onEditTicket(ticket) {
@@ -99,7 +99,7 @@ export default class TicketList {
         const ticketToUpdate = ticket;
         ticketToUpdate.name = name;
         ticketToUpdate.description = description;
-      }).catch(() => Modal.showError('Ошибка', 'Не удалось изменить данные тикета!'));
+      }).catch(() => Modal.showError('Не удалось изменить данные тикета!'));
     }).catch(Modal.showError);
   }
 
@@ -107,7 +107,7 @@ export default class TicketList {
     Modal.confirmDialog('Удалить тикет', 'Вы уверены что хотите удалить тикет? Это действие необратимо.').then(() => {
       API.removeTicket(ticket.id).then(() => {
         this.removeTicket(ticket);
-      }).catch(() => Modal.showError('Ошибка', 'Не удалось удалить тикет!'));
+      }).catch(() => Modal.showError('Не удалось удалить тикет!'));
     }).catch(Modal.showError);
   }
 
@@ -116,6 +116,6 @@ export default class TicketList {
     API.updateTicket(ticket.id, { status }).then((ticketData) => {
       const ticketToUpdate = ticket;
       ticketToUpdate.status = ticketData.status;
-    }).catch(() => Modal.showError('Ошибка', 'Не удалось изменить статус тикета!'));
+    }).catch(() => Modal.showError('Не удалось изменить статус тикета!'));
   }
 }

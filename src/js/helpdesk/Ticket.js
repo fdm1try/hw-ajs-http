@@ -155,7 +155,7 @@ export default class Ticket {
       this.elDescription.classList.add(Ticket.classNameDescription);
       this.elDescription.textContent = data.description;
       this.elName.appendChild(this.elDescription);
-    }).catch(() => Modal.showError('Ошибка', 'Не удалось загрузить данные тикета!'));
+    }).catch(() => Modal.showError('Не удалось загрузить данные тикета!'));
   }
 
   onEditButtonClick() {
