@@ -1,0 +1,208 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #107ABB;
+}
+
+/* LIST */
+
+.ticket-list {
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.ticket-list-items {
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.ticket-list-add_button {
+    align-self: flex-end;
+    margin: 10px 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* TICKET */
+.ticket-list-item {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    background: #dddddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.ticket-list-item:nth-child(odd) {
+    background: white;
+}
+
+.ticket-list-item-status {
+    margin: 5px 0 0 0;
+}
+
+.ticket-list-item-status_checkbox {
+    width: 30px;
+    cursor: pointer;
+}
+
+.ticket-list-item-name {
+    flex-grow: 1;
+}
+
+.ticket-list-item-description {
+    margin: 10px 20px;
+}
+
+.ticket-list-item-created {
+    margin-top: 5px;
+}
+
+.ticket-list-item-controls button {
+    background: none;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.ticket-list-item-controls-edit_button:hover {
+    color: rgb(138, 138, 9);
+}
+
+.ticket-list-item-controls-remove_button:hover {
+    color: rgb(140, 6, 6);
+}
+
+/* MODAL */
+.modal-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 3000;
+}
+
+.modal {
+    background: white;
+    color: black;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 2px solid ;
+}
+
+.modal-title {
+    padding: 10px 0;
+    margin: 0;
+}
+
+.modal-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.modal-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(57, 57, 57);
+    color: white;
+    border: 1px solid transparent;
+}
+
+.modal-controls button:hover {
+    background: #fff;
+    color: black;
+    border: 1px solid black;
+}
+
+/* EDITOR */
+.ticket-editor {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.ticket-editor-form {
+    background: white;
+    border-radius: 15px;
+    padding: 20px 50px;
+    width: 50vw;
+    min-width: 500px;
+}
+
+.ticket-editor-title {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.ticket-editor-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-editor-field * {
+    margin-top: 5px;
+}
+
+.ticket-editor-name_label, .ticket-editor-description_label {
+    margin-top: 15px;
+}
+
+.ticket-editor-name_input, .ticket-editor-description_input {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.ticket-editor-description_input {
+    height: 50px;
+}
+
+.ticket-editor-controls {
+    margin: 10px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2%;
+}
+
+.ticket-editor-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(57, 57, 57);
+    color: white;
+    border: 1px solid transparent;
+}
+
+.ticket-editor-controls button:hover {
+    background: #fff;
+    color: black;
+    border: 1px solid black;
+}
